@@ -47,6 +47,7 @@ git clone https://github.com/SleepTheGod/dns-zone-audit/
 cd dns-zone-audit
 chmod +x main.sh
 ./main.sh
+sudo bash ssl.sh target port
 ```
 
 ### Input options
