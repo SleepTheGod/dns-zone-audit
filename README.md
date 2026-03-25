@@ -43,6 +43,8 @@ sudo yum install bind-utils
 ### Run the script
 
 ```bash
+git clone https://github.com/SleepTheGod/dns-zone-audit/
+cd dns-zone-audit
 chmod +x main.sh
 ./main.sh
 ```
