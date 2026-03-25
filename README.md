@@ -1,4 +1,3 @@
-````markdown
 # DNS Zone Audit
 
 A lightweight Bash-based security tool for testing DNS zone transfer misconfigurations (AXFR), associated with CVE-1999-0532.
@@ -9,28 +8,29 @@ This script queries authoritative name servers for a domain and attempts full zo
 
 ## Features
 
-- Interactive domain input (single or multiple targets)
-- Batch scanning via file input
-- Automatic authoritative name server discovery
-- AXFR testing over TCP
-- Clear, color-coded output
-- Minimal dependencies
+* Interactive domain input (single or multiple targets)
+* Batch scanning via file input
+* Automatic authoritative name server discovery
+* AXFR testing over TCP
+* Clear, color-coded output
+* Minimal dependencies
 
 ---
 
 ## Requirements
 
-- `bash`
-- `dig` (from `dnsutils` or `bind-utils`)
+* `bash`
+* `dig` (from `dnsutils` or `bind-utils`)
 
 ### Install dependencies
 
-**Debian / Ubuntu:**
+**Debian / Ubuntu**
+
 ```bash
 sudo apt install dnsutils
-````
+```
 
-**RHEL / CentOS:**
+**RHEL / CentOS**
 
 ```bash
 sudo yum install bind-utils
@@ -77,7 +77,7 @@ target.org
 1. Retrieves NS records for each domain
 2. Iterates through each authoritative name server
 3. Attempts a DNS zone transfer (AXFR)
-4. Reports:
+4. Reports
 
    * SUCCESS → Zone transfer allowed (vulnerable)
    * FAILED → Transfer refused (secure)
@@ -88,7 +88,7 @@ target.org
 
 ```text
 === Testing domain: example.com ===
-Name servers:
+Name servers
   ns1.example.com
   ns2.example.com
 
@@ -103,7 +103,7 @@ SUCCESS: Zone transfer allowed
 
 ## Security Impact
 
-If a zone transfer succeeds, an attacker can retrieve:
+If a zone transfer succeeds, an attacker can retrieve
 
 * Subdomains
 * Internal hostnames
@@ -116,7 +116,7 @@ This significantly lowers the barrier for further attacks.
 
 ## Mitigation
 
-To prevent unauthorized zone transfers:
+To prevent unauthorized zone transfers
 
 * Restrict AXFR to trusted IP addresses only
 * Disable zone transfers if not required
@@ -135,5 +135,3 @@ Do not use it against systems you do not own or have explicit permission to asse
 ## Author
 
 Taylor Christian Newsome
-
----
