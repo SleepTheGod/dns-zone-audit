@@ -1,0 +1,108 @@
+root@clumsy:~# sudo bash dns.sh
+DNS Zone Transfer Test (CVE-1999-0532)
+This script attempts to retrieve full DNS records from the authoritative name servers.
+Only use on domains you own or have explicit permission to test.
+
+Enter target domain(s) (space-separated) or 'file:<filename>': cock.li
+
+=== Testing domain: cock.li ===
+Name servers:
+  ns1.cock.li.
+  ns2.cock.li.
+
+Attempting zone transfer from ns1.cock.li...
+SUCCESS: Zone transfer allowed from ns1.cock.li
+Zone data:
+    ns1.cock.li. dns-admin.cock.li. 6 7200 3600 2592000 3600
+    193.239.85.202
+    2001:ac8:7d:1e::c0cc:2
+    10 mx1.cock.li.
+    20 mx2.cock.li.
+    ns1.cock.li.
+    ns2.cock.li.
+    "v=spf1 include:mail.cock.li -all"
+    "keybase-site-verification=ZgT-kFfcyZCCw2dx7YWwAZl1TUc1gvfrv83hLq2Tgo0"
+    "brave-ledger-verification=f36e71a35290de544e65350225eb77a100acb0010175516f7ba6af2eb25c1ba5"
+    "v=DMARC1;p=quarantine;adkim=s;aspf=s;ri=43200;" "ruf=mailto:postmaster@cock.li;rua=mailto:postmaster.dmarc@cock.li"
+    "v=DKIM1; t=s; p=" "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bR6CoPzhVvDabckmKdk" "jH0eiWIhNCc508tqu/F/rAQ/CryO6kqSZNvTSQD7NUg3eOYpeA3uGWhfuP+cReXp" "nDATZfnluvuLL+2qHdkeiNkrzy8c1tSDlxlbqkHmZzp1hrOhvNN8ioIsuqxvamCO" "ZnaN2wzbm6rRpvAFmJEfwRAUbkNbtOZonQSNq/j2Tg+4w3AOIfiTpNosIdWSp9Sb" "uQFpHaoGmr4AJkt5m4elrCTyYIvInGYOqCCvjyFlMk4us64v/bWOSec0ZPZL8l47" "kUJZIvNCByo9GDWM/TKcx9gqDf4DB6pdQ38M5Yz3ThNDawV83K/mV8sFSE9bfeM+" "MwIDAQAB"
+    1 1 5222 xmpp.cock.li.
+    1 1 5269 xmpp.cock.li.
+    37.120.193.124
+    2001:ac8:7d:1e::c0cc:3
+    10 mx1.cock.li.
+    20 mx2.cock.li.
+    "v=spf1 include:mail.cock.li -all"
+    193.239.85.202
+    2001:ac8:7d:1e::c0cc:2
+    "v=DMARC1;p=quarantine;adkim=s;aspf=s;ri=43200;" "ruf=mailto:postmaster@cock.li;rua=mailto:postmaster.dmarc@cock.li"
+    "v=DKIM1; t=s; p=" "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bR6CoPzhVvDabckmKdk" "jH0eiWIhNCc508tqu/F/rAQ/CryO6kqSZNvTSQD7NUg3eOYpeA3uGWhfuP+cReXp" "nDATZfnluvuLL+2qHdkeiNkrzy8c1tSDlxlbqkHmZzp1hrOhvNN8ioIsuqxvamCO" "ZnaN2wzbm6rRpvAFmJEfwRAUbkNbtOZonQSNq/j2Tg+4w3AOIfiTpNosIdWSp9Sb" "uQFpHaoGmr4AJkt5m4elrCTyYIvInGYOqCCvjyFlMk4us64v/bWOSec0ZPZL8l47" "kUJZIvNCByo9GDWM/TKcx9gqDf4DB6pdQ38M5Yz3ThNDawV83K/mV8sFSE9bfeM+" "MwIDAQAB"
+    1 1 5222 xmpp.cock.li.
+    1 1 5269 xmpp.cock.li.
+    autoconfig.cock.li.
+    cock.li.
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:3
+    "v=spf1 ip4:37.120.193.120/29 ip6:2001:ac8:7d:1e::/64 -all"
+    37.120.193.125
+    2001:ac8:7d:1e::c0cc:4
+    37.120.193.125
+    2001:ac8:7d:1e::c0cc:4
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:2
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:2
+    cock.li.
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:3
+    ns1.cock.li. dns-admin.cock.li. 6 7200 3600 2592000 3600
+
+Attempting zone transfer from ns2.cock.li...
+SUCCESS: Zone transfer allowed from ns2.cock.li
+Zone data:
+    ns1.cock.li. dns-admin.cock.li. 6 7200 3600 2592000 3600
+    193.239.85.202
+    2001:ac8:7d:1e::c0cc:2
+    10 mx1.cock.li.
+    20 mx2.cock.li.
+    ns1.cock.li.
+    ns2.cock.li.
+    "v=spf1 include:mail.cock.li -all"
+    "keybase-site-verification=ZgT-kFfcyZCCw2dx7YWwAZl1TUc1gvfrv83hLq2Tgo0"
+    "brave-ledger-verification=f36e71a35290de544e65350225eb77a100acb0010175516f7ba6af2eb25c1ba5"
+    "v=DMARC1;p=quarantine;adkim=s;aspf=s;ri=43200;" "ruf=mailto:postmaster@cock.li;rua=mailto:postmaster.dmarc@cock.li"
+    "v=DKIM1; t=s; p=" "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bR6CoPzhVvDabckmKdk" "jH0eiWIhNCc508tqu/F/rAQ/CryO6kqSZNvTSQD7NUg3eOYpeA3uGWhfuP+cReXp" "nDATZfnluvuLL+2qHdkeiNkrzy8c1tSDlxlbqkHmZzp1hrOhvNN8ioIsuqxvamCO" "ZnaN2wzbm6rRpvAFmJEfwRAUbkNbtOZonQSNq/j2Tg+4w3AOIfiTpNosIdWSp9Sb" "uQFpHaoGmr4AJkt5m4elrCTyYIvInGYOqCCvjyFlMk4us64v/bWOSec0ZPZL8l47" "kUJZIvNCByo9GDWM/TKcx9gqDf4DB6pdQ38M5Yz3ThNDawV83K/mV8sFSE9bfeM+" "MwIDAQAB"
+    1 1 5222 xmpp.cock.li.
+    1 1 5269 xmpp.cock.li.
+    37.120.193.124
+    2001:ac8:7d:1e::c0cc:3
+    10 mx1.cock.li.
+    20 mx2.cock.li.
+    "v=spf1 include:mail.cock.li -all"
+    193.239.85.202
+    2001:ac8:7d:1e::c0cc:2
+    "v=DMARC1;p=quarantine;adkim=s;aspf=s;ri=43200;" "ruf=mailto:postmaster@cock.li;rua=mailto:postmaster.dmarc@cock.li"
+    "v=DKIM1; t=s; p=" "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bR6CoPzhVvDabckmKdk" "jH0eiWIhNCc508tqu/F/rAQ/CryO6kqSZNvTSQD7NUg3eOYpeA3uGWhfuP+cReXp" "nDATZfnluvuLL+2qHdkeiNkrzy8c1tSDlxlbqkHmZzp1hrOhvNN8ioIsuqxvamCO" "ZnaN2wzbm6rRpvAFmJEfwRAUbkNbtOZonQSNq/j2Tg+4w3AOIfiTpNosIdWSp9Sb" "uQFpHaoGmr4AJkt5m4elrCTyYIvInGYOqCCvjyFlMk4us64v/bWOSec0ZPZL8l47" "kUJZIvNCByo9GDWM/TKcx9gqDf4DB6pdQ38M5Yz3ThNDawV83K/mV8sFSE9bfeM+" "MwIDAQAB"
+    1 1 5222 xmpp.cock.li.
+    1 1 5269 xmpp.cock.li.
+    autoconfig.cock.li.
+    cock.li.
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:3
+    "v=spf1 ip4:37.120.193.120/29 ip6:2001:ac8:7d:1e::/64 -all"
+    37.120.193.125
+    2001:ac8:7d:1e::c0cc:4
+    37.120.193.125
+    2001:ac8:7d:1e::c0cc:4
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:2
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:2
+    cock.li.
+    37.120.193.123
+    2001:ac8:7d:1e::c0cc:3
+    ns1.cock.li. dns-admin.cock.li. 6 7200 3600 2592000 3600
+
+WARNING: cock.li is vulnerable to zone transfers!
+
+Testing completed.
+root@clumsy:~#
